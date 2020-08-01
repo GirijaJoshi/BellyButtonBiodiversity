@@ -7,9 +7,9 @@ This project creates a dash board for belly button biacteria for provided sample
 * Create gauge chart for selected ID's washing frequency.
 * To achive this goal we have used JavaScript, Plotly and HTML
 ### Example
-#### 940 
+#### Subject Test ID: 940 
 ![940_all](images/940_all.png)
-#### 946 
+#### Subject Test ID: 946 
 ![946_all](images/946_all.png)
-#### 960 
+#### Subject Test ID: 960 
 ![960_all](images/960_all.png)
