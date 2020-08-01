@@ -6,7 +6,7 @@ This project creates a dash board for belly button biacteria for provided sample
 * Polts bubble chart for selected ID to visualize the relative frequency of all the bacterial species found in a volunteer’s navel.
 * Create gauge chart for selected ID's washing frequency.
 * To achive this goal we have used JavaScript, Plotly and HTML
-### Example
+### Page Display Example
 #### Subject Test ID: 940 
 ![940_all](images/940_all.png)
 #### Subject Test ID: 946 
