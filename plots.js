@@ -33,22 +33,14 @@ function buildMetadata(sample) {
       var resultArray  = metadata.filter(sampleObj => sampleObj.id == sample);
       var result = resultArray[0];
       console.log(result);
+
       var PANEL = d3.select("#sample-metadata");
       PANEL.html("");
-      title = "ID: ";
-      PANEL.append("h6").text(title + result.id);
-      title = "ETHNICITY: ";
-      PANEL.append("h6").text(title + result.ethnicity);
-      title = "GENDER: ";
-      PANEL.append("h6").text(title + result.gender);
-      title = "AGE: ";
-      PANEL.append("h6").text(title + result.age);
-      title = "LOCATION: ";
-      PANEL.append("h6").text(title + result.location);
-      title = "BBTYPE: ";
-      PANEL.append("h6").text(title + result.bbtype);
-      title = "WFREQ: ";
-      PANEL.append("h6").text(title + result.wfreq);
+
+      Object.keys(result).forEach(function(key) {
+        console.log(key.toUpperCase(), result[key]);
+        PANEL.append("h6").text(key.toUpperCase() + ": " + result[key]);
+      });
   });
 }
 
@@ -102,12 +94,6 @@ function buildBarChart(firstTenSamples, firstTenOtuLable, sample) {
   };
 
   var data = [trace];
-  // var layout = {
-  //   title: "OTU for " + sample,
-  //   xaxis: { title: "Sample Values"},
-  //   yaxis: { title: "OTU IDs"}
-  // };
-  // Plotly.newPlot("bar", data, layout);
   Plotly.newPlot("bar", data);
 }
 
