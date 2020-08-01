@@ -102,12 +102,13 @@ function buildBarChart(firstTenSamples, firstTenOtuLable, sample) {
   };
 
   var data = [trace];
-  var layout = {
-    title: "OTU for " + sample,
-    xaxis: { title: "Sample Values"},
-    yaxis: { title: "OTU IDs"}
-  };
-  Plotly.newPlot("bar", data, layout);
+  // var layout = {
+  //   title: "OTU for " + sample,
+  //   xaxis: { title: "Sample Values"},
+  //   yaxis: { title: "OTU IDs"}
+  // };
+  // Plotly.newPlot("bar", data, layout);
+  Plotly.newPlot("bar", data);
 }
 
 /*
@@ -136,6 +137,9 @@ function buildBubbleChart(otu_ids, sampleValues, otuLabels) {
   Plotly.newPlot('bubble', data, layout);
 }
 
+/*
+  This function create a gauge chart and moves needle according to wash frequncy
+*/
 function buildGaugeChart(wfreq) {
   // Enter a speed between 0 and 180
   var level = parseFloat(wfreq) * 20;
